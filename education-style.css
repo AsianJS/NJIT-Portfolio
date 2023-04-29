@@ -1,0 +1,42 @@
+.title{
+  font-size: 3vw;
+  height: 100%;
+  width: 100%;
+
+}
+.subtitle{
+  font-size: 2vw;
+}
+.educational-about{
+  border: 3px solid black;
+  border-radius:15%;
+}
+
+#about{
+  display:none;
+  transition: all 2s ease-in-out;
+}
+ /* Applying CSS to sphere */
+.tagcloud {
+  display: inline-block !important;
+  left: 37% !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+  font-family: 'Bebas Neue', cursive !important;
+  font-size: 1vw !important;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item:hover {
+  color: #1d2f70 !important;
+}
+
+.project-button{
+  margin-top:10vh;
+}
+
+.btn{
+  height: 6vh;
+  width: 14vw;
+}
+
