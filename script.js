@@ -8,7 +8,7 @@ const Texts = [
 
 var tagCloud = TagCloud('.Sphere', Texts, {
   // Sphere radius in px
-  radius: 200,
+  radius: 180,
   // animation speed
   // slow, normal, fast
   maxSpeed: 'normal',
@@ -19,7 +19,7 @@ var tagCloud = TagCloud('.Sphere', Texts, {
   keep: true
 });
 let storage = document.querySelectorAll(".tagcloud--item");
-let responseStorage = [["Hello", "There"], ["This", "What"], [,], [,], [,], [,], [,], [,], [,]];
+let responseStorage = [["HTML is more like something necessary to completely know to code websites. I believed I learned everything to know about the \"language\".", "There"], ["CSS is one of those languages in which you think you know everything, but new things always pop up in the most random places. However, I still do believe I pretty much know most things when it comes to CSS as I have been using it for three years.", "What"], ["Javascript is extremely simple to learn when it comes to programming. However, I still do have difficulty when applying Javascript to certain things.",], ["I know how to use Node.js. Simple as that.",], ["I have been coding Bootstrap for over two years. I started to fall away from its fixed structure, but it is still useful at times. ",], ["MYSQL is something I put as I seen before. I do not have much experience in it, but I do know what it is and how to kind of use it.",], ["I try to avoid to use this framework as it is dying, but it does make some applications of Javascript a lot more easier.",], ["Java is my best language currently. I know how to use most of it, but anything too deep are a little difficult to use.",], ["I have half of a year in experienc in Vue.js. I am not an expert in it, but it is fun to use.",]];
 const textResponse = new Map();
 textResponse.set("HTML", responseStorage[0]);
 textResponse.set("CSS", responseStorage[1]);
@@ -35,11 +35,17 @@ $(document).ready(function() {
   $(".tagcloud--item").on("click", function(event) {
     let text = event.target.innerHTML;
     let response = textResponse.get(text);
+    console.log("Hi");
     if ($("#about").is(":hidden")) {
-      $("#about").fadeIn("slow", function() {
+        document.getElementById("title").innerHTML = text;
+        document.getElementById("details").innerHTML = response[0];
+      $("#about").fadeIn("slow");
+    } else {
+      $(".stuffy").fadeOut("slow", function() {
+        document.getElementById("title").innerHTML = text;
+        document.getElementById("details").innerHTML = response[0];
+        $(".stuffy").fadeIn("slow");
       });
-      document.getElementById("title").innerHTML = text;
-      document.getElementById("details").innerHTML = response[0];
     }
   })
 })

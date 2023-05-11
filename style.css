@@ -14,7 +14,7 @@ background: radial-gradient(circle, rgba(176,190,255,1) 14%, rgba(188,199,255,1)
 
 
 .title{
-  font-size: 3vw;
+  font-size: 5vw;
   height: 100%;
   width: 100%;
 
@@ -25,5 +25,34 @@ background: radial-gradient(circle, rgba(176,190,255,1) 14%, rgba(188,199,255,1)
 
 .btn{
   height: 6vh;
-  width: 14vw;
+  width: 20vw;
+  font-size: 1vw !important;
+}
+
+@media only screen and (max-width: 900px) {
+.btn{
+  height: 6vh;
+  width: 30vw;
+  font-size: 2vw !important;
+}
+  .subtitle{
+    font-size:2.5vw;
+  }
+    .title{
+    font-size:4vw !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+.btn{
+  height: 6vh;
+  width: 40vw !important;
+  font-size: 2.5vw !important;
+}
+    .subtitle{
+    font-size:3.5vw;
+  }
+  .title{
+    font-size:5vw !important;
+  }
 }

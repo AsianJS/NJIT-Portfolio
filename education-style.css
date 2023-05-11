@@ -1,29 +1,28 @@
 .title{
-  font-size: 3vw;
+  font-size: 5vh;
   height: 100%;
   width: 100%;
 
 }
 .subtitle{
-  font-size: 2vw;
+  font-size: 3vw;
+}
+#details{
+  font-size:1.5vw;
 }
 .educational-about{
   border: 3px solid black;
   border-radius:15%;
+  height:25vh;
 }
 
-#about{
-  display:none;
-  transition: all 2s ease-in-out;
-}
+
  /* Applying CSS to sphere */
 .tagcloud {
-  display: inline-block !important;
-  left: 37% !important;
   font-weight: bold !important;
   letter-spacing: 1px !important;
-  font-family: 'Bebas Neue', cursive !important;
-  font-size: 1vw !important;
+  font-size: 18px !important;
+  display: flex;
 }
 
 /* Change color of each text in sphere on hover   */
@@ -38,5 +37,27 @@
 .btn{
   height: 6vh;
   width: 14vw;
+}
+
+@media only screen and (max-width: 900px) {
+.btn{
+  height: 6vh;
+  width: 30vw;
+  font-size: 2vw !important;
+}
+#details{
+  font-size: 2vw;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.btn{
+  height: 6vh;
+  width: 40vw !important;
+  font-size: 2.5vw !important;
+}
+#details{
+  font-size: 3.5vw !Important;
+}
 }
 
